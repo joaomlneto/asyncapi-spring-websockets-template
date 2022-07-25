@@ -1,6 +1,6 @@
 {
   "name": "@joaomlneto/asyncapi-spring-websockets-template",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Spring WebSockets template for AsyncAPI generator.",
   "keywords": [
     "asyncapi",

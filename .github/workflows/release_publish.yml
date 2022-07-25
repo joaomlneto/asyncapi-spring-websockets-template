@@ -1,0 +1,27 @@
+name: Publish new release
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  build:
+    name: Create package
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Publish to NPM
+        run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${secrets.NPM_AUTH_TOKEN}

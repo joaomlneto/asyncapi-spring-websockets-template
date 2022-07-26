@@ -52,7 +52,7 @@
   },
   "release": {
     "branches": [
-      "master"
+      "main"
     ],
     "plugins": [
       [
@@ -73,9 +73,8 @@
   },
   "generator": {
     "supportedProtocols": [
-      "kafka",
-      "amqp",
-      "mqtt"
+      "ws",
+      "wss"
     ],
     "nonRenderableFiles": [
       "**/*.jar"
@@ -91,31 +90,6 @@
         "default": "false",
         "required": false
       },
-      "listenerPollTimeout": {
-        "description": "Only for Kafka. Timeout to use when polling the consumer.",
-        "default": 3000,
-        "required": false
-      },
-      "listenerConcurrency": {
-        "description": "Only for Kafka. Number of threads to run in the listener containers.",
-        "default": 3,
-        "required": false
-      },
-      "connectionTimeout": {
-        "description": "Only for MQTT. This value, measured in seconds, defines the maximum time interval the client will wait for the network connection to the MQTT server to be established. The default timeout is 30 seconds. A value of 0 disables timeout processing meaning the client will wait until the network connection is made successfully or fails.",
-        "default": 30,
-        "required": false
-      },
-      "disconnectionTimeout": {
-        "description": "Only for MQTT. The completion timeout in milliseconds when disconnecting. The default disconnect completion timeout is 5000 milliseconds.",
-        "default": 5000,
-        "required": false
-      },
-      "completionTimeout": {
-        "description": "Only for MQTT. The completion timeout in milliseconds for operations. The default completion timeout is 30000 milliseconds.",
-        "default": 30000,
-        "required": false
-      },
       "asyncapiFileDir": {
         "description": "Parameter of @asyncapi/generator-hooks#createAsyncapiFile, allows to specify where original AsyncAPI file will be stored.",
         "default": "src/main/resources/api/",
@@ -125,14 +99,9 @@
         "description": "The Java package of the generated classes. Alternatively you can set the specification extension info.x-java-package",
         "default": "com.asyncapi",
         "required": false
-      },
-      "addTypeInfoHeader": {
-        "description": "Only for Kafka. Add type information to the message header",
-        "default": "true",
-        "required": false
       }
     },
-    "generator": ">=1.8.27 <2.0.0",
+    "generator": ">=1.9.4 <2.0.0",
     "filters": [
       "@asyncapi/generator-filters"
     ],

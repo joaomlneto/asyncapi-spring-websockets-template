@@ -99,6 +99,21 @@
         "description": "The Java package of the generated classes. Alternatively you can set the specification extension info.x-java-package",
         "default": "com.asyncapi",
         "required": false
+      },
+      "groupId": {
+        "description": "Maven groupId",
+        "default": "com.asyncapi",
+        "required": false
+      },
+      "artifactId": {
+        "description": "Maven artifact ID",
+        "default": "api",
+        "required": false
+      },
+      "springBootVersion": {
+        "description": "Maven artifact ID",
+        "default": "2.6.10",
+        "required": false
       }
     },
     "generator": ">=1.9.4 <2.0.0",

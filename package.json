@@ -111,7 +111,7 @@
         "required": false
       },
       "springBootVersion": {
-        "description": "Maven artifact ID",
+        "description": "Spring Boot Version",
         "default": "2.6.10",
         "required": false
       }
